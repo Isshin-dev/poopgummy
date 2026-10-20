@@ -11,6 +11,10 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173/`. No build step is needed.
 
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow in `.github/workflows/pages.yml` publishes the contents of `dist/` whenever `main` is updated. The source images and project files stay in the repository, while the published site uses `dist/` as its root.
+
 ## Files
 
 - `dist/index.html`: page structure, copy, and interactive controls
