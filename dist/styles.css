@@ -18,3 +18,5 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media(max-width:850px){.hero-package{top:22vh;height:62vh}.hero-halo{top:24vh}.hero-sticker{top:17vh}}
 @media(max-width:640px){.hero-package{top:38vh;height:53vh}.hero-halo{top:40vh}.hero-sticker{top:37vh}}
+@media(min-width:760px) and (max-width:850px){.has-motion .hero-package{width:48vw;height:70vh;top:16%;right:0}.has-motion .hero-sticker{top:7vh;right:4%}}
+img{height:auto}

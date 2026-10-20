@@ -3,7 +3,7 @@
 (() => {
   const body = document.body;
   const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
-  const largeScreen = matchMedia('(min-width: 851px) and (min-height: 700px)');
+  const largeScreen = matchMedia('(min-width: 760px) and (min-height: 700px)');
   const motionToggle = document.querySelector('.motion-toggle');
   const countButtons = [...document.querySelectorAll('[data-count]')];
   const trio = document.querySelector('.gummy-trio');
