@@ -9,9 +9,9 @@
   const trio = document.querySelector('.gummy-trio');
   const countMessage = document.querySelector('#count-message');
   const messages = {
-    1: 'ひと粒だけ、こっそりにやり。',
-    2: 'ふた粒なら、笑顔もふたつ。',
-    3: '今日は、にやけるくらいがちょうどいい。'
+    1: 'One little secret smile.',
+    2: 'Double the gummy, double the grin.',
+    3: 'Three little reasons to smile.'
   };
   let manuallyReduced = false;
   let animationContext;
@@ -99,7 +99,7 @@
     body.classList.toggle('reduced-motion', reduced);
     motionToggle.setAttribute('aria-pressed', String(reduced));
     motionToggle.disabled = motionPreference.matches;
-    motionToggle.querySelector('.motion-label').textContent = motionPreference.matches ? '端末の設定で動きを抑えています' : reduced ? '動きを有効にする' : '動きを抑える';
+    motionToggle.querySelector('.motion-label').textContent = motionPreference.matches ? 'Reduced motion is on in your device settings' : reduced ? 'Enable motion' : 'Reduce motion';
     motionToggle.querySelector('.motion-symbol').textContent = reduced ? '▶' : 'Ⅱ';
     if (!reduced && largeScreen.matches) {
       try { startMotion(); }

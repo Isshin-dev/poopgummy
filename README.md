@@ -1,37 +1,37 @@
 # POOPGUMMY
 
-架空の「ピンク色のうんち形グミ」のプロモーションサイト。KIILA LPのスクロール演出を参考に、パッケージからグミ単体への視点移動、商品写真の見せ方、長いページの章立てを作りました。実在の商品や販売ページではありません。
+A promotional site for a fictional pink, poop-shaped gummy candy. It takes inspiration from the KIILA LP's scroll-led storytelling, moving from the pouch to the gummy itself and into a close-up of its texture. This is a fictional concept, not a real product or sales page.
 
-## ローカルで見る
+## Preview locally
 
 ```sh
 cd dist
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-ブラウザーで `http://127.0.0.1:4173/` を開きます。ビルドは不要です。
+Open `http://127.0.0.1:4173/`. No build step is needed.
 
-## 構成
+## Files
 
-- `dist/index.html`: ページ構造、文章、操作UI
-- `dist/styles.css`: デザイン、レスポンシブ、静的表示
-- `dist/script.js`: GSAP / ScrollTrigger のスクロール演出、Lenis、動きの切替、グミの数の操作
-- `dist/assets/*.webp`: サイト用に圧縮した生成画像
-- `source-images/*.png`: 生成画像の原本
+- `dist/index.html`: page structure, copy, and interactive controls
+- `dist/styles.css`: visual design, responsive layout, and static presentation
+- `dist/script.js`: GSAP / ScrollTrigger scenes, Lenis, motion controls, and gummy counter
+- `dist/assets/*.webp`: optimized generated images used by the site
+- `source-images/*.png`: original generated images
 
-アニメーションは幅760px以上・高さ700px以上の画面で有効です。小さな画面では通常のスクロール表示になります。「動きを抑える」ボタンと端末の `prefers-reduced-motion` に対応しています。タッチ端末では通常のスクロールを使います。
+Scroll scenes are enabled on screens at least 760px wide and 700px tall. Smaller screens use normal document flow. The site supports the motion toggle and `prefers-reduced-motion`; touch devices keep native scrolling.
 
-## 生成ビジュアル
+## Generated visuals
 
-画像生成にはCodexの組み込みimagegenを使用しました。
+The images were created with Codex's built-in imagegen tool:
 
-1. `gummy-original.png`: 「透明背景、1粒のピンク色のうんち形グミ。3段の渦と巻いた先端、透けるゼリーと細かな砂糖粒。顔・文字・パッケージなし」という商品撮影用プロンプト。
-2. `package-original.png`: 1のグミを参照し、「透明背景、バターイエローの再封可能なパウチ。前面に正確な POOPGUMMY / PINK BERRY、透明窓から同じグミが見える」というパッケージ撮影用プロンプト。
-3. `gummies-original.png`: 1のグミと2の配色を参照し、「淡いピンクのスタジオ背景に7〜8粒のグミを並べた接写。左は文章用に余白を残す」という商品写真用プロンプト。
+1. `gummy-original.png`: Transparent product cutout of one pink poop-shaped gummy with a three-tier swirl, curled tip, translucent jelly, and sugar crystals. No face, text, or package.
+2. `package-original.png`: Transparent product mockup of a butter-yellow resealable pouch with exact `POOPGUMMY` and `PINK BERRY` label text, referencing the gummy from image 1 through a clear window.
+3. `gummies-original.png`: Macro product photo of seven or eight matching pink gummies on a pale pink studio surface, leaving negative space on the left, referencing image 1 and the pouch palette from image 2.
 
-これらは架空のデザイン・生成イメージです。実際の食品写真や販売商品の仕様を表すものではありません。
+All visuals are generated concept imagery. They do not depict real food photography or product specifications.
 
-## ライブラリ
+## Libraries
 
-参考LPから同梱版のGSAP / ScrollTrigger 3.15.0、Lenis 1.3.27をコピーしています。ライセンス文は `dist/assets/GSAP-LICENSE.txt` と `dist/assets/LENIS-LICENSE.txt` にあります。
+GSAP / ScrollTrigger 3.15.0 and Lenis 1.3.27 are bundled from the reference LP. License files are in `dist/assets/GSAP-LICENSE.txt` and `dist/assets/LENIS-LICENSE.txt`.
 
